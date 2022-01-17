@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+
+body {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+  background-color: #d5271d;
+}
+
+#divContenedor {
+  width: 960px;
+  background-color: #FFF;
+  margin: 0 auto;
+}
+
+#logo {
+  margin: 20px;
+  float: left;
+}
+
+#logoLogin {
+  margin: 20px;
+  float: left;
+}
+
+#imgMedicoLogo {
+  margin: 20px;
+  float: left;
+}
+
+#divLoginRegistro{
+  float:right;
+  clear:right;
+  padding:0 50px 5px 0;
+}
+
+
+a:link, a:visited{
+  color:#d5271d;
+}
+
+#navPrincipal {
+  float: right;
+  margin-top: 35px;
+  margin-right:20px;
+}
+
+#navPrincipal li {
+  list-style-type: none;
+  padding: 10px;
+  border: 1px solid #6B6B6B;
+  background-color: #d5271d;
+  margin: 5px;
+
+  float: left;
+  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+#navPrincipal a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#navPrincipal a:visited {
+  color: #FBC155;
+}
+
+
+
+
+
+#medicoNavPrincipal {
+  float: right;
+  margin-top: 35px;
+  margin-right:20px;
+}
+
+#medicoNavPrincipal li {
+  list-style-type: none;
+  padding: 10px;
+  border: 1px solid #6B6B6B;
+  background-color: #d5271d;
+  margin: 5px;
+
+  float: left;
+  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+#medicoNavPrincipal a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#medicoNavPrincipal a:visited {
+  color: #FBC155;
+}
+
+
+
+
+
+
+
+
+
+#cabezal {
+  background-color: #FEFEFE;
+}
+
+#divContenido {
+  background-color: #FEFEFE;
+  width: 590px;
+  padding:20px;
+  float: left;
+}
+
+#divLateral {
+  background-color: #BDBDBD;
+  width: 290px;
+  float: left;
+  padding:20px;
+}
+
+#divPie {
+  background-color: #FFF;
+  clear: both;
+  padding:20px;
+}
+
+
+
+
+
+input[type="text"]:focus { background-color: #FFFFCC;  }
+input[type="text"] {width: 180px;  }
+
+input{
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8);
+  font:bold 12px Arial, Helvetica, sans-serif;
+  height: 21px;
+  line-height: 16px;
+  padding:0 2px;
+  width: 120px;
+}
+
+
+
+
+
+
+
+
+#divMedicoContenido {
+  background-color: #FEFEFE;
+  width: 590px;
+  padding:20px;
+  float: left;
+}
+
+#divMedicoLateral {
+  background-color: #BDBDBD;
+  width: 290px;
+  float: left;
+  padding:20px;
+}
+
+#divMedicoPie {
+  background-color: #FFF;
+  clear: both;
+  padding:20px;
+}
+
+
+
+
+
+.Table  
+
+{  
+    display: table;  
+}  
+
+.Title  
+
+{  
+    display: table-caption;  
+    text-align: center;  
+    font-weight: bold;  
+    font-size: larger;  
+}  
+
+.Heading  
+
+{  
+    display: table-row;  
+    font-weight: bold;  
+    text-align: center;  
+}  
+
+.Row  
+
+{  
+    display: table-row;  
+}  
+
+.Cell  
+
+{  
+    display: table-cell;  
+    border: solid;  
+    border-width: thin;
+    padding-left: 5px;  
+    padding-right: 5px;  
+}  
+
+.logout{
+    float: right ;
+}

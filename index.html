@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Obligatorio</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="jQuery.js" type="text/javascript"></script>
+        <script src="codigoJS.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+
+        <div id="divContenedor">
+            <div id="divLogOut" class="logout">
+                <a href="#LogOut" id="aLogOut">Cerrar Sesion</a><label id="lblUsuarioLogueado"></label>
+
+            </div>
+
+            <div id="divPaciente">
+                <div class="cabezal clearfix" id="divCabezal">
+                    <img id="logo" src="imgs/logo.jpg" alt="logo">
+
+                    <ul id="navPrincipal">
+
+                        <li id="liContieneMarcarConsulta">
+                            <a href="#seccion1Paciente" id="liMarcarConsulta">Marcar Consultas</a>
+                        </li>
+                        <li id="liContieneConsultasFinalizadas">
+                            <a href="#seccion2Paciente" id="liVerConsultaFinalizada">Historial de Consultas</a>
+                        </li>
+                        <li id="liContieneConsultasNoFinalizadas">
+                            <a href="#seccion3Paciente" id="liVerConsultasNoFinalizadas">Consultas Pendientes</a>
+                        </li>
+                        <li>
+                            <a href="#seccion4Paciente" id="liModificarDatos">Modificar Datos</a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+                <div id="divContenido">
+
+                    <div id="divMarcarConsultaPaciente">
+                        <br>
+                        <div id="divTablaDeMedicosMarcarConsulta"></div>
+
+
+                        <div id="divPacienteConfirmaConsulta">
+                            <label>Medico:</label>
+                            <input id="lblElegirMedicoParaCrearConsulta" type="text"/><BR>
+                            <BR>
+                            <label><b>Desea confirmar la consulta?</b></label><BR>
+                            <input id="btnPacienteConfirmaConsulta" type="button" value="Confirmar"/>
+                            <div id="divAvisarSiConfirmaCrearConsulta"> </div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="divPacienteHistorialDeConsultas">
+                        <br>
+                        <div id="divTablaPacienteHistorialDeConsultas"> </div>
+                    </div>
+
+
+                    <div id="divPacienteConsultasPendientes">
+                        <br>
+                        <div id="divTablaPacienteConsultasPendientes"> </div>
+                    </div>
+
+
+                    <div id="divModificarDatos">
+                        <fieldset>
+                            <center> <h1>Datos de Usuario</h1> </center>
+                            <label for="imagenPaciente"><b>Foto: </b></label>
+                            <img src="" id="imagenPaciente"><br>
+                            <input type="file" id="leerArchivoFoto"><BR>
+                            <BR>
+                            <label><b>Cedula paciente: </b></label><input id="txtCiPaciente" type="text" value=""/>
+                            <br>
+                            <label><b>Nombre: </b></label><input id="txtNombrePaciente" type="text" value=""/>
+                            <br>
+                            <label><b>Apellido: </b></label><input id="txtApellidoPaciente" type="text" value=""/>
+                            <br>
+                            <label><b>Contraseña </b></label><input id="txtContraseñaPaciente" type="text" value=""/><br>
+                            <br>
+                            <input type="button" value="Modificar" id="btnModificarDatos">
+                            <div id="divAvisarSiSeRealizoModificacion"></div>
+                        </fieldset>
+                    </div>
+
+                </div>
+                <div id="divPie">
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div id="divMedico">
+                <div class="cabezal clearfix" id="divMedicoCabezal">
+                    <img id="imgMedicoLogo" src="imgs/logo.jpg" alt="logo">
+                    <ul id="medicoNavPrincipal">
+                        <li>
+                            <a href="#seccion1Medico" id="liMedicoRealizarConsulta">Realizar Consulta</a>
+                        </li>
+                        <li>
+                            <a href="#seccion2Medico" id="liMedicoConsultasImpagas">Consultas impagas</a>
+                        </li>
+                        <li>
+                            <a href="#seccion3Medico" id="liMedicoVerConsultas">Historico de consultas</a>
+                        </li>
+                        <li>
+                            <a href="#seccion4Medico" id="liMedicoHabilitarDeshabilitar">Estado pacientes</a>
+                        </li>
+                       
+                    </ul>
+
+                </div>
+
+
+                <BR>
+                <BR>
+                <div id="divMedicoContenido">
+
+                    <div id="divMedicoRealizarConsulta">
+
+                        <div id="divTablaMedicoRealizarConsulta"> </div>
+
+                        <BR>
+                        <div id="divPesoYAlturaDePaciente">
+                            <H1>Atender al paciente</H1>
+                            <label>Nombre paciente:</label>
+                            <input id="lblNombrePacienteEnRealizarConsulta"/><br>
+                            <label>Consulta:</label>
+                            <input id="lblConsultaASerRealizada" type="text" /><BR>
+                            <BR>
+                            <label>Peso(kg):</label> 
+                            <input id="txtPesoPaciente" type="text" value="" placeholder="Ingrese Peso" /><BR>
+                            <label>Altura(m):</label>
+                            <input id="txtAlturaPaciente" type="text" value="" placeholder="Ingrese Altura" /><BR>
+                            <input id="btnAsignarPesoYAltura" type="button" value="Asignar" /><BR>
+                            <div id="divAvisarSiAsignoPesoAltura"> </div><BR>
+                            <div id="divAvisarPesoMaxOMin"> </div><BR>
+                            <input id="btnCalcularImcPaciente" type="button" value="Calcular IMC" /><BR>
+
+                            <div id="divMostrarImcPaciente"> </div>
+                            <BR>
+                            <div id="divAgregarDescripcionaConsulta">
+                                <label>Ingrese descripcion a la consulta</label><BR>
+                                <textarea id="txtAreaIngresarDescripcionaConsulta" rows="6" placeholder="Ingrese descripcion" cols="40"></textarea><BR>
+                                <input id="btnAgregarDescripcionaConsulta" type="button" value="Agregar"/><BR>
+                                <div id="divAvisarSiSeAgregoDescripcionaConsulta"></div><BR>
+                            </div>
+                        </div>
+                        <BR>
+
+                        <div id="divMarcarConsultaComoPagaONoEnRealizarConsulta">
+                            <H3>Desea marcar la consulta como paga?</H3>
+                            <input id="btnMarcarConsultaComoPagaEnRealizarConsulta" type="submit" value="SI"/>
+                            <input id="btnMarcarConsultaComoNoPagaEnRealizarConsulta" type="submit" value="NO"/>
+                            <div id="divAvisarSiSePagoConsultaEnRealizarConsulta"> </div>
+
+                        </div>
+
+                        <div id="divMarcarConsultaComoCerradaoNo">
+                            <H3>Desea finalizar la consulta?</H3>
+                            <input id="btnMarcarConsultaComoCerradaEnRealizarConsulta" type="submit" value="SI"/>
+                            <div id="divAvisarSiSeCerroConsultaEnRealizarConsulta"> </div>
+                            <BR>
+                            <BR>
+                            <input id="btnMedicoVolverATablaConsultasNoFinalizadas" type="button" value="Volver" />
+                        </div>
+                        <BR>
+                        <BR>
+                        <BR>
+
+                    </div>
+
+                    <div id="divMedicoConsultasImpagas">
+                        <div id="divMedicoSeleccionarPacienteConsultasImpagas">
+                            <H1>Consultas Impagas</H1>
+                            <H3>Elegir paciente o ver todas</H3>
+                            <select id="selPacienteConsultasImpagas"></select><BR>
+                            <input type="button" value="Filtrar Paciente" id="btnMedicoVerConsultasImpagasUnPaciente">
+                            <input type="button" value="Ver todas" id="btnMedicoVerConsultasImpagasTodosLosPacientes">
+                        </div>
+                        <BR>
+                        <div id="divTablaMedicoConsultasImpagas"> </div>
+                        <BR>
+
+                        <div id="divMarcarConsultaComoPagaONo">
+                            <label>Consulta:</label>
+                            <input id="lblConsultaMarcarComoPaga" type="text" /><BR>
+
+                            <H3>Desea marcar la consulta como paga?</H3>
+                            <input id="btnMarcarConsultaComoPagaEnConsultasImpagas" type="submit" value="SI"/>
+                            <input id="btnNoMarcarConsultaComoPagaEnConsultasImpagas" type="submit" value="NO"/>
+                            <BR>
+                            <div id="divAvisarSiSePagoConsultaEnConsultasImpagas"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="divMedicoVerConsultas">
+                        <div id="divMedicoSeleccionarPacienteHistoricoConsultas">
+                            <H1>Historico de Consultas</H1>
+                            <H3>Elegir paciente o ver todas</H3>
+                            <select id="selPacienteHistoricoConsultas"></select><BR>
+                            <input type="button" value="Filtrar Paciente" id="btnMedicoVerHistoricoConsultasUnPaciente">
+                            <input type="button" value="Ver todas" id="btnMedicoVerHistoricoConsultasTodosLosPacientes">
+                        </div>
+                        <div id="divTablaMedicoVerTodasLasConsultas"></div>
+                        <BR>
+                        <div id="divMedicoVerDatosDeUnaConsulta"> 
+                            <label>Consulta:</label>
+                            <input id="lblConsultaParaVerDatos" type="text" /><BR>
+                            <label>Peso(kg):</label>
+                            <input id="lblConsultaParaVerDatosPeso" type="text" /><BR>
+                            <label>Altura(m):</label>
+                            <input id="lblConsultaParaVerDatosAltura" type="text" /><BR>
+                            <label>Ultimo IMC:</label>
+                            <input id="lblConsultaParaVerDatosIMC" type="text" /><BR>
+                            <label>Descripcion:</label><BR>
+                            <textarea id="txtConsultaParaVerDatosDescripcion" rows="6" cols="40"></textarea><BR>
+                        </div>
+
+                        <BR>
+                        <BR>
+
+                    </div>
+
+
+
+                    <div id="divMedicoHabilitarDeshabilitar">
+                        <BR>
+                        <div id="divTablaMedicoHabilitarDeshabilitarPacientes"> </div>
+                        <BR>
+                        <div id="divMedicoPreguntarSiHabilitaDeshabilita">                      
+                            <label>Paciente:</label>
+                            <input id="lblElegirPacienteHabilitarDeshabilitar" type="text" /><BR>
+                            <BR>
+                            <H3>Que desea hacer?</H3>
+                            <input id="btnMarcarPacienteComoHabilitado" type="submit" value="Habilitar"/>
+                            <input id="btnMarcarPacienteComoDeshabilitado" type="submit" value="Deshabilitar"/>
+                        </div>
+                        <div id="divAvisarSiHabilitoDeshabilito"> </div>
+                        <BR>
+
+                    </div>
+
+
+                </div>
+                <div id="divMedicoPie">
+                </div>
+
+            </div>
+
+
+
+
+            <div class="cabezal clearfix" id="divCabezalLogin">
+                <img id="logoLogin" src="imgs/logo.jpg" alt="logo">
+                <div id="divLoginRegistro">
+
+                    <H3>Ingrese sus datos</H3>
+
+                    <div id="divLogin">
+                        <label>Cedula:</label>
+                        <input id="txtLogin" type="text" value="" placeholder="Sin puntos ni guiones" /><BR>
+                        <BR>
+                        <label>Contraseña:</label>
+                        <input id="txtContraseña" type="password" /><BR>
+                        <BR>
+                        <center><input id="btnLogin" type="button" value="Confirmar" /></center><br>
+                        <label id="lblErrorEnLogin"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="divMostrarTablaMedicosPaciente">
+                
+            </div>
+
+        </div>
+
+    </body>
+</html>
